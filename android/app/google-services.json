@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1013219673970",
+    "project_id": "visit-vault",
+    "storage_bucket": "visit-vault.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1013219673970:android:dde873a886b9f867e13feb",
+        "android_client_info": {
+          "package_name": "com.example.visit_vault"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyChLxaHMc0w26DpGMpC0CgOPUqr-RYyVnQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

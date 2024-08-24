@@ -1,20 +1,26 @@
 import 'package:flutter/material.dart';
-import 'package:visit_vault/views/utils/themes/dark_theme.dart';
-import 'package:visit_vault/views/utils/themes/light_theme.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'package:get/get.dart';
+import 'package:visit_vault/firebase_options.dart';
+import 'package:visit_vault/views/screens/home/home_screen.dart';
 
-void main() {
-  runApp(const MyApp());
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform
+  );
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      theme: lightTheme,
-      darkTheme: darkTheme,
-      home: Container(),
+    return GetMaterialApp(
+      title: 'Firebase Auth',
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+      ),
+      home: HomeScreen(),
     );
   }
 }
